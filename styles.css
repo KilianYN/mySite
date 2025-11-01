@@ -1,0 +1,102 @@
+body {
+    background-color: #0d0d0d;
+    color: #e0e0e0;
+    font-family: 'Roboto', sans-serif;
+}
+
+/* Header */
+header {
+    padding: 30px 50px;
+    border-bottom: 4px solid #ffcc00;
+}
+
+header h1 {
+    font-family: 'Fredoka One', cursive;
+    font-size: 2.5rem;
+    color: #ffcc00;
+    text-shadow: 2px 2px 5px #000;
+    margin: 0;
+}
+
+header p {
+    margin: 5px 0 0;
+    font-style: italic;
+    color: #ccc;
+}
+
+/* Horizontale Cards */
+main.d-flex {
+    align-items: stretch; /* Höhe bis Footer */
+}
+
+.horizontal-card {
+    border-width: 3px;
+    border-style: solid;
+    border-radius: 15px;
+    background-color: #1a1a1a;
+    padding: 20px;
+    min-width: 250px;
+    max-width: 300px;
+    transition: transform 0.2s, box-shadow 0.2s;
+    font-size: 1.1rem; /* Text größer */
+}
+
+.horizontal-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0 25px rgba(0,255,255,0.5);
+}
+
+/* Card borders */
+.border-warning { border-color: #ffcc00; }
+.border-danger { border-color: #ff4d4d; }
+.border-info { border-color: #00ffff; }
+.border-purple { border-color: #cc00ff; }
+
+/* Text-Outline für Lesbarkeit */
+.horizontal-card h5,
+.horizontal-card p,
+.horizontal-card li {
+    color: #fff;
+    display: inline-block;
+    padding: 2px 4px;
+    border-radius: 3px;
+}
+
+/* Very subtle text outline / glow */
+.horizontal-card.border-warning h5,
+.horizontal-card.border-warning p,
+.horizontal-card.border-warning li {
+    text-shadow: 0.5px 0.5px 1px #7a6f00, -0.5px 0.5px 1px #7a6f00, 0.5px -0.5px 1px #7a6f00, -0.5px -0.5px 1px #7a6f00;
+}
+
+.horizontal-card.border-danger h5,
+.horizontal-card.border-danger p,
+.horizontal-card.border-danger li {
+    text-shadow: 0.5px 0.5px 1px #662626, -0.5px 0.5px 1px #662626, 0.5px -0.5px 1px #662626, -0.5px -0.5px 1px #662626;
+}
+
+.horizontal-card.border-info h5,
+.horizontal-card.border-info p,
+.horizontal-card.border-info li {
+    text-shadow: 0.5px 0.5px 1px #007575, -0.5px 0.5px 1px #007575, 0.5px -0.5px 1px #007575, -0.5px -0.5px 1px #007575;
+}
+
+.horizontal-card.border-purple h5,
+.horizontal-card.border-purple p,
+.horizontal-card.border-purple li {
+    text-shadow: 0.5px 0.5px 1px #660066, -0.5px 0.5px 1px #660066, 0.5px -0.5px 1px #660066, -0.5px -0.5px 1px #660066;
+}
+
+
+
+/* Anime Bilder */
+.anime-item {
+    margin-bottom: 10px;
+}
+
+.anime-img {
+    width: 100px;
+    height: auto;
+    display: block;
+    margin-bottom: 5px;
+}
