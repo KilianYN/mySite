@@ -1,13 +1,21 @@
+/* ---------------------- */
+/* General Body Styling   */
+/* ---------------------- */
 body {
-    background-color: #0d0d0d;
+    background: linear-gradient(to bottom, #0d0d0d, #1a1a1a);
     color: #e0e0e0;
     font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
 }
 
-/* Header */
+/* ---------------------- */
+/* Header Styling         */
+/* ---------------------- */
 header {
     padding: 30px 50px;
     border-bottom: 4px solid #ffcc00;
+    text-align: center;
 }
 
 header h1 {
@@ -24,35 +32,26 @@ header p {
     color: #ccc;
 }
 
-/* Horizontale Cards */
-main.d-flex {
-    align-items: stretch; /* Höhe bis Footer */
-}
-
+/* ---------------------- */
+/* Cards Styling          */
+/* ---------------------- */
 .horizontal-card {
-    border-width: 3px;
-    border-style: solid;
+    border: 3px solid #ffcc00;
     border-radius: 15px;
     background-color: #1a1a1a;
     padding: 20px;
-    min-width: 250px;
-    max-width: 300px;
-    transition: transform 0.2s, box-shadow 0.2s;
-    font-size: 1.1rem; /* Text größer */
+    font-size: 1.05rem;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
 
 .horizontal-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 0 25px rgba(0,255,255,0.5);
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: 0 0 25px #ffcc00;
 }
 
-/* Card borders */
-.border-warning { border-color: #ffcc00; }
-.border-danger { border-color: #ff4d4d; }
-.border-info { border-color: #00ffff; }
-.border-purple { border-color: #cc00ff; }
-
-/* Text-Outline für Lesbarkeit */
+/* ---------------------- */
+/* Text inside Cards      */
+/* ---------------------- */
 .horizontal-card h5,
 .horizontal-card p,
 .horizontal-card li {
@@ -60,42 +59,69 @@ main.d-flex {
     display: inline-block;
     padding: 2px 4px;
     border-radius: 3px;
+    text-shadow: 0.5px 0.5px 1px #222;
 }
 
-/* Very subtle text outline / glow */
-.horizontal-card.border-warning h5,
-.horizontal-card.border-warning p,
-.horizontal-card.border-warning li {
-    text-shadow: 0.5px 0.5px 1px #7a6f00, -0.5px 0.5px 1px #7a6f00, 0.5px -0.5px 1px #7a6f00, -0.5px -0.5px 1px #7a6f00;
+/* ---------------------- */
+/* Button Styling         */
+/* ---------------------- */
+.btn {
+    transition: all 0.2s ease;
 }
 
-.horizontal-card.border-danger h5,
-.horizontal-card.border-danger p,
-.horizontal-card.border-danger li {
-    text-shadow: 0.5px 0.5px 1px #662626, -0.5px 0.5px 1px #662626, 0.5px -0.5px 1px #662626, -0.5px -0.5px 1px #662626;
+.btn:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 10px #ffcc00;
 }
 
-.horizontal-card.border-info h5,
-.horizontal-card.border-info p,
-.horizontal-card.border-info li {
-    text-shadow: 0.5px 0.5px 1px #007575, -0.5px 0.5px 1px #007575, 0.5px -0.5px 1px #007575, -0.5px -0.5px 1px #007575;
+.btn-icon {
+    width: 20px;
+    height: 20px;
+    margin-right: 8px;
+    vertical-align: middle;
 }
 
-.horizontal-card.border-purple h5,
-.horizontal-card.border-purple p,
-.horizontal-card.border-purple li {
-    text-shadow: 0.5px 0.5px 1px #660066, -0.5px 0.5px 1px #660066, 0.5px -0.5px 1px #660066, -0.5px -0.5px 1px #660066;
-}
-
-
-/* Anime Bilder */
-.anime-item {
-    margin-bottom: 10px;
-}
-
+/* ---------------------- */
+/* Anime Images           */
+/* ---------------------- */
 .anime-img {
-    width: 100px;
-    height: auto;
-    display: block;
-    margin-bottom: 5px;
+    width: 60px;
+    height: 60px;
+    border-radius: 8px;
+    object-fit: cover;
+}
+
+/* Align anime items horizontally */
+.anime-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    opacity: 0;
+    transform: translateY(10px);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+/* Show class for fade-in */
+.anime-item.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* ---------------------- */
+/* Footer Styling         */
+/* ---------------------- */
+footer {
+    padding: 15px 0;
+    border-top: 2px solid #ffcc00;
+    text-align: center;
+    font-size: 0.9rem;
+}
+
+/* ---------------------- */
+/* Responsive Adjustments */
+/* ---------------------- */
+@media (max-width: 768px) {
+    .horizontal-card {
+        min-width: 100%;
+    }
 }
